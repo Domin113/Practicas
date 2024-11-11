@@ -1,0 +1,127 @@
+a{
+    text-decoration: none;
+}
+
+body{
+    background-image: url(../images/fondo.jpg);
+    background-size: cover; 
+    color: rgb(80, 80, 80);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    /* width: 740px; */
+    width: 50%;
+    margin: 100px auto 50px; 
+    justify-content: center;
+}
+
+#mensaje{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px 15px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#restart{
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.section1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.2);
+    padding: 0 10px 10px 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 60%;
+    min-width: 440px;
+    max-width: 520px;
+}
+
+.section2{   
+    background-color: rgba(255,255,255,0.2);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 40%;
+    height: 400px;
+    padding: 0 20px;
+    min-width: 270px;
+    max-width: 450px;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    color: rgb(112, 112, 112);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.statistics{
+    border: 1px solid white;
+    height: 105px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+}
+
+footer{
+    text-align: center;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+        background: rgb(48,223,185);
+        background: radial-gradient(circle, rgba(48,223,185,1) 0%, rgba(188,225,217,1) 100%);
+    }
+
+    main {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .section1 {
+        width: 100%;
+        min-width: 300px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .section2 {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    button {
+        height: 60px;
+        width: 60px; 
+        font-size: 1.5rem; 
+        color: white;
+    }
+
+    .statistics {
+        height: auto; 
+        padding: 1rem; 
+    }
+}
