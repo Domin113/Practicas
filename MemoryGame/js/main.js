@@ -33,7 +33,7 @@ function countTime(){
         if(time == 0){
             clearInterval(regressiveTimeId);
             blockCards();
-            mostrarMensaje();
+            showMessageLose();
         }
     },1000);
 }
@@ -46,9 +46,14 @@ function blockCards(){
     }
 }
 
-function mostrarMensaje() {
-    var mensaje = document.getElementById('mensaje');
-    mensaje.style.display = 'block';
+function showMessageLose() {
+    var messageLose = document.getElementById('messageLose');
+    messageLose.style.display = 'block';
+}
+
+function showMessageWin() {
+    var messageWin = document.getElementById('messageWin');
+    messageWin.style.display = 'block';
 }
 
 // Función principal
@@ -96,6 +101,7 @@ function uncover(id){
                 showSuccesses.innerHTML = `Aciertos: ${successes} 😱`;
                 showTime.innerHTML = `Enhorabuena!! Solo tardaste ${initialTime - time} segundos`;
                 showMovements.innerHTML = `Movimientos: ${movements} 😎`;
+                showMessageWin();
             }
         }else{
             // Destapar y tapar tarjetas en un tiempo
@@ -144,8 +150,12 @@ function restartGame() {
     console.log(numbers);
 
     // Ocultar el mensaje de "Tiempo agotado"
-    var mensaje = document.getElementById('mensaje');
-    mensaje.style.display = 'none';
+    var messageLose = document.getElementById('messageLose');
+    messageLose.style.display = 'none';
+
+    // Ocultar el mensaje de "Volver a jugar"
+    var messageWin = document.getElementById('messageWin');
+    messageWin.style.display = 'none';
     
     // Volver a iniciar el temporizador
     countTime();

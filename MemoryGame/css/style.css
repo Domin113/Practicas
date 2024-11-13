@@ -8,6 +8,19 @@ body{
     color: rgb(80, 80, 80);
 }
 
+#back{
+    display: inline-block;
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    width: 60px;
+    height: auto;
+    margin: 20px;
+}
+
 main{
     display: flex;
     align-items: center;
@@ -17,7 +30,7 @@ main{
     justify-content: center;
 }
 
-#mensaje{
+#messageLose, #messageWin{
     display: none;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;

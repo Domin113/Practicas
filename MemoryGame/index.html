@@ -7,9 +7,14 @@
     <title>Memory Game</title>
 </head>
 <body>
+    <a href="https://domin113.github.io/Portfolio/"><div id="back">Volver</div></a>
     <main>
-        <div id="mensaje">
+        <div id="messageLose">
             ¡¡El tiempo se ha agotado!!<br>
+            <span onclick="restartGame()" id="restart">🔁</span>
+        </div>
+        <div id="messageWin">
+            Volver a jugar<br>
             <span onclick="restartGame()" id="restart">🔁</span>
         </div>
         <section class="section1">
@@ -45,10 +50,6 @@
             <h2 id="successes" class="statistics">Aciertos: 0</h2>
             <h2 id="time-left" class="statistics">Tiempo: 40 segundos</h2>
             <h2 id="movements" class="statistics">Movimientos: 0</h2>
-            <div id="mensaje">
-                ¡¡El tiempo se ha agotado!!<br>
-                <span onclick="restartGame()" id="restart">🔁</span>
-            </div>
         </section>
     </main>
     <footer>
