@@ -27,6 +27,7 @@ console.log(numbers);
 
 // Funciones
 function countTime(){
+    clearInterval(regressiveTimeId); // Asegurar que no haya temporizadores previos
     regressiveTimeId = setInterval(()=>{
         time--;
         showTime.innerHTML = `Tiempo: ${time} segundos`;
@@ -132,6 +133,10 @@ function restartGame() {
     initialTime = 40;
     regressiveTimeId = null;
 
+    // Detener cualquier temporizador en ejecución
+    clearInterval(regressiveTimeId);
+    regressiveTimeId = null;
+
     // Actualizar la interfaz de usuario
     showMovements.innerHTML = `Movimientos: 0`;
     showSuccesses.innerHTML = `Aciertos: 0`;
@@ -158,5 +163,5 @@ function restartGame() {
     messageWin.style.display = 'none';
     
     // Volver a iniciar el temporizador
-    countTime();
+    // countTime();
 }
